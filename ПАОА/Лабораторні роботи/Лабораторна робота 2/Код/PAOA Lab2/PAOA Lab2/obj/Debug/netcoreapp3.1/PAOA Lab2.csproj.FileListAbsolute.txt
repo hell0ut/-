@@ -1,0 +1,13 @@
+D:\Університет\2 курс\ПАОА\Лабораторні роботи\Лабораторна робота 2\Код\PAOA Lab2\PAOA Lab2\bin\Debug\netcoreapp3.1\PAOA Lab2.exe
+D:\Університет\2 курс\ПАОА\Лабораторні роботи\Лабораторна робота 2\Код\PAOA Lab2\PAOA Lab2\bin\Debug\netcoreapp3.1\PAOA Lab2.deps.json
+D:\Університет\2 курс\ПАОА\Лабораторні роботи\Лабораторна робота 2\Код\PAOA Lab2\PAOA Lab2\bin\Debug\netcoreapp3.1\PAOA Lab2.runtimeconfig.json
+D:\Університет\2 курс\ПАОА\Лабораторні роботи\Лабораторна робота 2\Код\PAOA Lab2\PAOA Lab2\bin\Debug\netcoreapp3.1\PAOA Lab2.runtimeconfig.dev.json
+D:\Університет\2 курс\ПАОА\Лабораторні роботи\Лабораторна робота 2\Код\PAOA Lab2\PAOA Lab2\bin\Debug\netcoreapp3.1\PAOA Lab2.dll
+D:\Університет\2 курс\ПАОА\Лабораторні роботи\Лабораторна робота 2\Код\PAOA Lab2\PAOA Lab2\bin\Debug\netcoreapp3.1\PAOA Lab2.pdb
+D:\Університет\2 курс\ПАОА\Лабораторні роботи\Лабораторна робота 2\Код\PAOA Lab2\PAOA Lab2\obj\Debug\netcoreapp3.1\PAOA Lab2.csprojAssemblyReference.cache
+D:\Університет\2 курс\ПАОА\Лабораторні роботи\Лабораторна робота 2\Код\PAOA Lab2\PAOA Lab2\obj\Debug\netcoreapp3.1\PAOA Lab2.AssemblyInfoInputs.cache
+D:\Університет\2 курс\ПАОА\Лабораторні роботи\Лабораторна робота 2\Код\PAOA Lab2\PAOA Lab2\obj\Debug\netcoreapp3.1\PAOA Lab2.AssemblyInfo.cs
+D:\Університет\2 курс\ПАОА\Лабораторні роботи\Лабораторна робота 2\Код\PAOA Lab2\PAOA Lab2\obj\Debug\netcoreapp3.1\PAOA Lab2.csproj.CoreCompileInputs.cache
+D:\Університет\2 курс\ПАОА\Лабораторні роботи\Лабораторна робота 2\Код\PAOA Lab2\PAOA Lab2\obj\Debug\netcoreapp3.1\PAOA Lab2.dll
+D:\Університет\2 курс\ПАОА\Лабораторні роботи\Лабораторна робота 2\Код\PAOA Lab2\PAOA Lab2\obj\Debug\netcoreapp3.1\PAOA Lab2.pdb
+D:\Університет\2 курс\ПАОА\Лабораторні роботи\Лабораторна робота 2\Код\PAOA Lab2\PAOA Lab2\obj\Debug\netcoreapp3.1\PAOA Lab2.genruntimeconfig.cache

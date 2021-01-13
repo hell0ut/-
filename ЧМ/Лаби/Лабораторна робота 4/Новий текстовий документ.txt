@@ -1,0 +1,18 @@
+A = {{-0.93, -0.08, 0.11}, {0.18, -0.48, 0}, {0.13, 0.31, -1}}
+b = {1.18, 0.21, 0.21};
+n = 3;
+MatrixForm[A];
+M = A - IdentityMatrix[n];
+MatrixForm[M];
+Norm[M, Infinity];
+w = 0.000005;
+A1 = w*A;
+M1 = Abs[IdentityMatrix[n] - A1];
+MN = Norm[M1, Infinity];
+g = w*b;
+x = g;
+ep = 0.00001;
+ek = 10;
+k = 0;
+While[ek > ep, y = N[M1.x + g]; ek = Max[Abs[y - x]]; x = y; k = k + 1]
+Print["x = ", x, ", ek = ", ek, ", k=", k]

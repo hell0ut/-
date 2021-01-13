@@ -1,0 +1,125 @@
+A = {{-0.93, -0.08, 0.11}, {0.18, -0.48, 0}, {0.13, 0.31, -1}};
+In[19]:= b = {1.18, 0.21, 0.21};
+In[20]:= MatrixForm[A]
+Out[20]//MatrixForm= (-0.93	-0.08	0.11
+0.18	-0.48	0
+0.13	0.31	-1
+
+)
+In[22]:= P = -IdentityMatrix[3];
+In[23]:= A1 = A.P
+In[24]:= MatrixForm[A1]
+Out[24]//MatrixForm= (0.93	0.08	-0.11
+-0.18	0.48	0.
+-0.13	-0.31	1.
+
+)
+In[30]:= M = IdentityMatrix[3] - A1;
+MatrixForm[M]
+Out[31]//MatrixForm= (0.07	-0.08	0.11
+0.18	0.52	0.
+0.13	0.31	0.
+
+)
+In[33]:= norm = Norm[M, Infinity]
+Out[33]= 0.7
+In[34]:= S1= norm/(1 - norm)
+Out[34]= 2.33333
+In[35]:= 1/norm
+Out[35]= 1.42857
+In[60]:= w= 0.05;
+In[68]:= g = w*b;
+ep = 0.00001; x = g;
+ek = 10; 
+In[77]:= While[ek>ep,y=N[M.x+b];ek=Max[Abs[y-x]];x=y;k=k+1];
+In[78]:= Print["x = ",x,", ek = ",ek,", k = ",k]
+
+During evaluation of In[78]:= x = {-1.26809,-0.913026,-0.657887}, ek = 8.37608*10^-6, k = 2649709
+In[76]:= x = x.P
+Out[76]= {-1.26809,-0.913026,-0.657887}
+In[167]:= LinearSolve[A, b]
+Out[167]= {-1.26809,-0.913034,-0.657893}
+In[82]:= Dm=Table[If[i==j,A[[i,j]],0],{i,3},{j,3}];
+In[83]:= MatrixForm[Dm]
+Out[83]//MatrixForm= (-0.93	0	0
+0	-0.48	0
+0	0	-1
+
+)
+In[98]:= M = -Inverse[Dm].(A - Dm);
+In[101]:= MatrixForm[M]
+Out[101]//MatrixForm= (0.	-0.0860215	0.11828
+0.375	0.	0.
+0.13	0.31	0.
+
+)
+In[102]:= g = Inverse[Dm].b;
+In[103]:= MatrixForm[g]
+Out[103]//MatrixForm= (-1.26882
+-0.4375
+-0.21
+
+)
+In[105]:= nm = Norm[M, Infinity]
+S = nm/(1 - nm)
+Out[105]= 0.44
+Out[106]= 0.785714
+In[126]:= ep = 0.00001; x = g; ek = 10;
+While[ek>ep, y = N[M.x + g]; ek = Max[Abs[y-x]*S]; x = y; k = k+1]
+In[128]:= Print["x = ",x,", ek = ",ek,", k = ",k]
+During evaluation of In[128]:= x = {-1.26809,-0.913033,-0.657893}, ek = 2.72271*10^-6, k = 2649736
+
+
+In[129]:= Dm=Table[If[i==j,A[[i,j]],0],{i,3},{j,3}];
+In[130]:= MatrixForm[Dm]
+Out[130]//MatrixForm= (-0.93	0	0
+0	-0.48	0
+0	0	-1
+
+)
+In[131]:= g = Inverse[Dm].b;
+MatrixForm[g]
+Out[132]//MatrixForm= (-1.26882
+-0.4375
+-0.21
+
+)
+In[133]:= L=Table[If[i>j,l[i,j]=A[[i,j]]/A[[i,i]],l[i,j]=0],{i,3},{j,3}];
+
+
+In[134]:= MatrixForm[L]
+Out[134]//MatrixForm= (0	0	0
+-0.375	0	0
+-0.13	-0.31	0
+
+)
+In[142]:= U=Table[If[i<j,u[i,j]=A[[i,j]]/A[[i,i]],u[i,j]=0],{i,3},{j,3}];
+In[143]:= MatrixForm[U]
+Out[143]//MatrixForm= (0	0.0860215	-0.11828
+0	0	0.
+0	0	0
+
+)
+In[145]:= M = -Inverse[IdentityMatrix[3]+L].U;
+MatrixForm[M]
+Out[146]//MatrixForm= (0.	-0.0860215	0.11828
+0.	-0.0322581	0.0443548
+0.	-0.0211828	0.0291263
+
+)
+In[193]:= nm = Norm[M, Infinity]
+Out[193]= 0.204301
+In[234]:= N[g1=-Inverse[IdentityMatrix[3]+L].g]
+ek = 10; ep = 0.00001; o = 0;
+Out[234]= {-0.059,-0.032625,-0.0282837}
+In[240]:= x = g1;
+x
+Out[241]= {-0.059,-0.032625,-0.0282837}
+In[237]:= While[ek>ep,y=N[M.x+g1];ek=Max[Abs[y-x]*S];x=y;k=k+1]
+In[239]:= Print["x = ",x,", ek = ",ek,", k = ",k]
+During evaluation of In[239]:= x = {-0.0595373,-0.0328265,-0.028416}, ek = 4.33355*10^-7, k = 2
+
+
+
+
+

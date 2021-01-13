@@ -1,0 +1,9 @@
+tree traversals:
+-inorder(left, root, right)
+-preorder(root, left, right)
+-postorder(left, right, root)
+    complexity
+-For a Graph, the complexity of a Depth First Traversal is O(n + m), where n is the number of nodes, and m is the number of edges.
+-number of edges in Binary Tree is n-1
+The complexity then becomes O(n + n-1), which is O(n).
+Jesse and cookies:

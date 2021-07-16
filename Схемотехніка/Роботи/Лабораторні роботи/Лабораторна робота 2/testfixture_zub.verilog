@@ -1,0 +1,23 @@
+
+// Verilog stimulus file.
+// Please do not create a module in this file.
+
+
+// Default verilog stimulus. 
+
+always #38 CLK = !CLK;
+initial
+begin 
+
+   CLK = 1'b0;
+   R = 1'b0;
+   S = 1'b1;
+   io_vdd_RS = 1'b1;
+   io_vss_RS = 1'b0;
+
+#50 S = 1'b0; R = 1'b1;
+#80 S = 1'b1;
+#80 R = 1'b0;
+#50 R = 1'b1;
+#60 $finish;
+end 

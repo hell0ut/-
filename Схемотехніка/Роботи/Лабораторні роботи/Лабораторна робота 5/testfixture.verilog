@@ -1,0 +1,21 @@
+
+// Verilog stimulus file.
+// Please do not create a module in this file.
+
+
+// Default verilog stimulus. 
+always #50 x0 = !x0;
+always #100 x1 = !x1;
+always #200 x2 = !x2;
+always #400 x3 = !x3;
+
+initial
+begin 
+   x0 = 1'b0;
+   x1 = 1'b0;
+   x2 = 1'b0;
+   x3 = 1'b0;
+   io_VDD_DC = 1'b1;
+   io_VSS_DC = 1'b0;
+#1000 $finish;
+end 
